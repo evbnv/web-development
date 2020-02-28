@@ -1,0 +1,12 @@
+PROGRAM PrintResponse(INPUT,OUTPUT);
+USES
+  Dos;
+BEGIN
+  WRITELN('Content-Type: text/plain');
+  WRITELN;
+  WRITELN('Hello ', GetEnv('QUERY_STRING'));
+  WRITELN(GetEnv('REQUEST_METHOD'));
+  WRITELN(GetEnv('CONTENT_LENGTH'));
+  WRITELN(GetEnv('HTTP_USER_AGENT'));
+  WRITELN(GetEnv('HTTP_HOST'))
+END.
